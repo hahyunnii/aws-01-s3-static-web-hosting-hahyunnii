@@ -76,6 +76,12 @@ Website endpoint: http://dku-cloudcomputing-2026-s3-bucket-hh-980808829165-us-ea
 ```bash
 bash scripts/verify-s3.sh
 ```
+```bash
+aws s3api get-bucket-website --bucket dku-cloudcomputing-2026-s3-bucket-hh-980808829165-us-east-1-an
+aws s3api get-bucket-policy --bucket dku-cloudcomputing-2026-s3-bucket-hh-980808829165-us-east-1-an
+aws s3api list-object-versions --bucket dku-cloudcomputing-2026-s3-bucket-hh-980808829165-us-east-1-an
+aws s3api get-public-access-block --bucket dku-cloudcomputing-2026-s3-bucket-hh-980808829165-us-east-1-an
+```
 - Result summary:
 ```json
 // get-bucket-website
