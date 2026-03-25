@@ -9,12 +9,12 @@ date
 - Result summary:
 ```json
 {
-    "UserId": "AROA6IXGDBDW3VDSMGKJG:user4886845=이하현",
+    "UserId": "AROA6IXGDBDW3VDSMGKJG:user4886845=_________",
     "Account": "980808829165",
-    "Arn": "arn:aws:sts::980808829165:assumed-role/voclabs/user4886845=이하현"
+    "Arn": "arn:aws:sts::980808829165:assumed-role/voclabs/user4886845=_________"
 }
 us-east-1
-Tue 24 Mar 2026 07:01:18 PM PDT
+Tue 24 Mar 2026 07:56:23 PM PDT
 ```
 - Interpretation: AWS Academy voclabs 역할로 정상 인증되었으며, 리전은 us-east-1로 설정되어 있음을 확인.
 
@@ -92,13 +92,76 @@ bash scripts/verify-s3.sh
 // list-object-versions
 {
     "Versions": [
-        { "Key": "app.js",      "VersionId": "N8ZYVIP.wodR__fcGZn8W6C7vm7Paxcc", "IsLatest": true,  "Size": 335, "LastModified": "2026-03-25T02:20:31+00:00" },
-        { "Key": "error.html",  "VersionId": "S0O9p9.kquKzPTvMCygemy026lavdLtB", "IsLatest": true,  "Size": 411, "LastModified": "2026-03-25T02:20:31+00:00" },
-        { "Key": "error.html",  "VersionId": "null",                              "IsLatest": false, "Size": 427, "LastModified": "2026-03-25T00:45:05+00:00" },
-        { "Key": "index.html",  "VersionId": "wUuntM7orN7zEgPZYIC6uobMeWHLZoi9", "IsLatest": true,  "Size": 942, "LastModified": "2026-03-25T02:20:31+00:00" },
-        { "Key": "index.html",  "VersionId": "null",                              "IsLatest": false, "Size": 979, "LastModified": "2026-03-25T00:45:05+00:00" },
-        { "Key": "styles.css",  "VersionId": "kIjCVmE.xrwRZ3K2CwcwMAFg8aCV3OKz", "IsLatest": true,  "Size": 741, "LastModified": "2026-03-25T02:20:31+00:00" },
-        { "Key": "styles.css",  "VersionId": "null",                              "IsLatest": false, "Size": 784, "LastModified": "2026-03-25T00:45:06+00:00" }
+        {
+            "ETag": "\"ef06d03051d05e6436a59705605c7f82\"",
+            "Size": 335,
+            "StorageClass": "STANDARD",
+            "Key": "app.js",
+            "VersionId": "N8ZYVIP.wodR__fcGZn8W6C7vm7Paxcc",
+            "IsLatest": true,
+            "LastModified": "2026-03-25T02:20:31+00:00",
+            "Owner": { "ID": "c9361eff1c96550f22059d2d734a97c3d2b94eead56bb7e550881b424a1bc581" }
+        },
+        {
+            "ETag": "\"106266554da1daade0a382c880958fc4\"",
+            "Size": 411,
+            "StorageClass": "STANDARD",
+            "Key": "error.html",
+            "VersionId": "S0O9p9.kquKzPTvMCygemy026lavdLtB",
+            "IsLatest": true,
+            "LastModified": "2026-03-25T02:20:31+00:00",
+            "Owner": { "ID": "c9361eff1c96550f22059d2d734a97c3d2b94eead56bb7e550881b424a1bc581" }
+        },
+        {
+            "ETag": "\"73285c27222af8869e2df9c7f4ca665b\"",
+            "Size": 427,
+            "StorageClass": "STANDARD",
+            "Key": "error.html",
+            "VersionId": "null",
+            "IsLatest": false,
+            "LastModified": "2026-03-25T00:45:05+00:00",
+            "Owner": { "ID": "c9361eff1c96550f22059d2d734a97c3d2b94eead56bb7e550881b424a1bc581" }
+        },
+        {
+            "ETag": "\"e1294b74802946ec51fc890309901bbf\"",
+            "Size": 942,
+            "StorageClass": "STANDARD",
+            "Key": "index.html",
+            "VersionId": "wUuntM7orN7zEgPZYIC6uobMeWHLZoi9",
+            "IsLatest": true,
+            "LastModified": "2026-03-25T02:20:31+00:00",
+            "Owner": { "ID": "c9361eff1c96550f22059d2d734a97c3d2b94eead56bb7e550881b424a1bc581" }
+        },
+        {
+            "ETag": "\"f8b1c1f78e9ff06f66c33b54b19e7140\"",
+            "Size": 979,
+            "StorageClass": "STANDARD",
+            "Key": "index.html",
+            "VersionId": "null",
+            "IsLatest": false,
+            "LastModified": "2026-03-25T00:45:05+00:00",
+            "Owner": { "ID": "c9361eff1c96550f22059d2d734a97c3d2b94eead56bb7e550881b424a1bc581" }
+        },
+        {
+            "ETag": "\"ec2e6119329b55e7ffd3de21ae646ddb\"",
+            "Size": 741,
+            "StorageClass": "STANDARD",
+            "Key": "styles.css",
+            "VersionId": "kIjCVmE.xrwRZ3K2CwcwMAFg8aCV3OKz",
+            "IsLatest": true,
+            "LastModified": "2026-03-25T02:20:31+00:00",
+            "Owner": { "ID": "c9361eff1c96550f22059d2d734a97c3d2b94eead56bb7e550881b424a1bc581" }
+        },
+        {
+            "ETag": "\"116a742cac5ac1bf64a6bf77b80f3a63\"",
+            "Size": 784,
+            "StorageClass": "STANDARD",
+            "Key": "styles.css",
+            "VersionId": "null",
+            "IsLatest": false,
+            "LastModified": "2026-03-25T00:45:06+00:00",
+            "Owner": { "ID": "c9361eff1c96550f22059d2d734a97c3d2b94eead56bb7e550881b424a1bc581" }
+        }
     ]
 }
 
